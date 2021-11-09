@@ -67,8 +67,6 @@ select_metrics = ["Accuracy", "balanced_accuracy_score",
                   'precision', 'recall', 'mcc', 'f1']
 select_metrics = st.sidebar.multiselect("性能評估選擇", select_metrics)
 
-image = Image.open('logo.png')
-st.image(image, width=500)
 st.title("Model Performance APP")
 
 if upload_file is not None:
