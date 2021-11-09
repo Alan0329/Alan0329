@@ -44,7 +44,8 @@ def calc_cm(input_data):
 
 
 def load_example_data():
-    df = pd.read_csv('Y_example.csv')
+    
+    df = pd.read_csv('https://github.com/Alan0329/Alan0329/raw/main/Other/streamlit_deploy/Y_example.csv')
     return df
 
 
