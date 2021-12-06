@@ -7,7 +7,6 @@ from tensorboardX import SummaryWriter
 from model import Dueling_Q_Network
 from utils import policy, shuffle_tensor
 from finta import TA
-import chart_studio.plotly as py
 from plotly.graph_objs import *
 import streamlit as st
 
