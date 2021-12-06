@@ -59,7 +59,7 @@ def test(env, model, plot_data, init_money):
 
 
 @st.cache(suppress_st_warning=True)
-def plot(plot_data, rewards, sharpe):
+def plot(plot_data, rewards, mean_sharpe):
     trace1 = {
         "line": {
             "dash": "solid",
@@ -113,7 +113,7 @@ def plot(plot_data, rewards, sharpe):
     """)
 
     st.write("##### 總報酬：{:.4f}".format(rewards[0]))
-    st.write("##### 夏普值：{:.4f}".format(sharpe[0]))
+    st.write("##### 夏普值：{:.4f}".format(mean_sharpe))
     st.plotly_chart(fig, use_container_width=True)
 
 
@@ -166,13 +166,13 @@ def main(data, param_file):
 
     plot_data = test_data.reset_index()
 
-    model, rewards, sharpe = test(
+    model, rewards, mean_sharpe = test(
         env=test_env,
         model=model,
         plot_data=plot_data,
         init_money=init_money)
 
-    plot(plot_data, rewards, sharpe)
+    plot(plot_data, rewards, mean_sharpe)
     return
 
 
