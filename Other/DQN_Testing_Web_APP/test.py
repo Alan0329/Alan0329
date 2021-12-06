@@ -202,5 +202,5 @@ else:
         st.subheader("Your Data")
         data = pd.read_csv("https://raw.githubusercontent.com/Alan0329/Alan0329/main/Other/DQN_Testing_Web_APP/00646.TW.csv")
         st.write(data)
-        param_file = "https://github.com/Alan0329/Alan0329/raw/main/Other/DQN_Testing_Web_APP/200_checkpoint.pth"
+        param_file = "https://github.com/Alan0329/Alan0329/blob/main/Other/DQN_Testing_Web_APP/200_checkpoint.pth"
         main(data, param_file)
