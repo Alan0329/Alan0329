@@ -202,7 +202,7 @@ else:
     if st.button("Use example data"):
         st.subheader("Your Data")
         data = pd.read_csv(
-            r"https:/github.com/Alan0329/Alan0329/blob/main/Other/DQN_Testing_Web_APP/00646.TW.csv")
+            "https:/github.com/Alan0329/Alan0329/blob/main/Other/DQN_Testing_Web_APP/00646.TW.csv")
         st.write(data)
-        param_file = r"https:/github.com/Alan0329/Alan0329/blob/main/Other/DQN_Testing_Web_APP/200_checkpoint.pth"
+        param_file = "https:/github.com/Alan0329/Alan0329/blob/main/Other/DQN_Testing_Web_APP/200_checkpoint.pth"
         main(data, param_file)
