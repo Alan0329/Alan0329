@@ -33,8 +33,8 @@ def rl_agent_test(model, env, step_max, epsilon, global_step, rewards, sharpe, n
         mean_sharpe_list = [i for i in total_sharpe if i != 0]
         mean_sharpe = sum(mean_sharpe_list) / len(mean_sharpe_list)
         rewards.append(total_reward)
-        sharpe.append(sharpe)
-    return rewards
+        total_sharpe.append(mean_sharpe)
+    return rewards, total_sharpe
 
 
 def test(env, model, plot_data, init_money):
@@ -44,7 +44,7 @@ def test(env, model, plot_data, init_money):
     sharpe = []
     losses = []
 
-    rewards = rl_agent_test(
+    rewards, total_sharpe = rl_agent_test(
         model=model,
         env=env,
         step_max=len(env.data)-1,
@@ -56,7 +56,7 @@ def test(env, model, plot_data, init_money):
         plot_data=plot_data,
         init_money=init_money)
 
-    return model, rewards, sharpe
+    return model, rewards, total_sharpe
 
 
 @st.cache(suppress_st_warning=True)
