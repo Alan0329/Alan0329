@@ -31,7 +31,7 @@ def rl_agent_test(model, env, step_max, epsilon, global_step, rewards, sharpe, n
             global_step += 1
 
         mean_sharpe_list = [i for i in total_sharpe if i != 0]
-        mean_sharpe = sum(total_sharpe) / len(total_sharpe)
+        mean_sharpe = sum(mean_sharpe_list) / len(mean_sharpe_list)
         rewards.append(total_reward)
     return rewards, mean_sharpe
 
