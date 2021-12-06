@@ -12,12 +12,11 @@ from plotly.graph_objs import *
 import streamlit as st
 
 
-def rl_agent_test(model, env, step_max, epsilon, global_step, rewards, shapre, num_epoch, plot_data, init_money):
-    # 開始訓練
-    for epoch in range(num_epoch):  # 把所有資料跑過一遍叫一個epoch
-        state = env.reset()  # 重置state
-        step = 0  # 看訓練第幾次
-        total_reward = 0  # 存reward
+def rl_agent_test(model, env, step_max, epsilon, global_step, rewards, sharpe, num_epoch, plot_data, init_money):
+    for epoch in range(num_epoch): 
+        state = env.reset()
+        step = 0
+        total_reward = 0
         total_sharpe = []
         sharpe = 0
         plot_data['buy'] = 0
@@ -25,25 +24,17 @@ def rl_agent_test(model, env, step_max, epsilon, global_step, rewards, shapre, n
 
         while True and step < step_max:
             action = policy(model=model, state=state, epsilon=epsilon)
-            # action進env會回傳[self.position_value] + self.history, reward, profits, hold_size, hold_amount
             next_state, reward, record_reward = env(action, plot_data)
-
             total_reward += record_reward
             total_sharpe.append(reward)
             state = next_state
             step += 1
             global_step += 1
 
-        sharpe = [i for i in total_sharpe if i != 0]
-        sharpe = sum(sharpe) / len(sharpe)
-
+        mean_sharpe_list = [i for i in total_sharpe if i != 0]
+        mean_sharpe = sum(mean_sharpe_list) / len(mean_sharpe_list)
         rewards.append(total_reward)
-        shapre.append(sharpe)
-        print('-----------------------------------------------------------')
-        print('總報酬 : {}'.format(total_reward))
-        print('平均夏普值 : {}'.format(sharpe))
-        print('-----------------------------------------------------------')
-
+        sharpe.append(sharpe)
     return rewards
 
 
@@ -51,7 +42,7 @@ def test(env, model, plot_data, init_money):
 
     global_step = 0
     rewards = []
-    shapre = []
+    sharpe = []
     losses = []
 
     rewards = rl_agent_test(
@@ -60,17 +51,17 @@ def test(env, model, plot_data, init_money):
         step_max=len(env.data)-1,
         global_step=global_step,
         rewards=rewards,
-        shapre=shapre,
+        sharpe=sharpe,
         num_epoch=1,
         epsilon=1.0,
         plot_data=plot_data,
         init_money=init_money)
 
-    return model, rewards, shapre
+    return model, rewards, sharpe
 
 
 @st.cache(suppress_st_warning=True)
-def plot(plot_data, rewards, shapre):
+def plot(plot_data, rewards, sharpe):
     trace1 = {
         "line": {
             "dash": "solid",
@@ -124,7 +115,7 @@ def plot(plot_data, rewards, shapre):
     """)
 
     st.write("##### 總報酬：{:.4f}".format(rewards[0]))
-    st.write("##### 夏普值：{:.4f}".format(shapre[0]))
+    st.write("##### 夏普值：{:.4f}".format(sharpe[0]))
     st.plotly_chart(fig, use_container_width=True)
 
 
@@ -138,11 +129,11 @@ def read_data(data, start_date, split_date):
         lowcols.append(lowcol.lower())
     data.columns = lowcols
 
-    macd = TA.MACD(data)  # 算出MACD(快線)、SIGNAL(慢線)
-    s_vama = TA.VAMA(data, period=10)  # 短VAMA，10日
-    l_vama = TA.VAMA(data, period=20)  # 長VAMA，20日
+    macd = TA.MACD(data)
+    s_vama = TA.VAMA(data, period=10)  
+    l_vama = TA.VAMA(data, period=20)  
     data = pd.concat([data, macd, s_vama, l_vama],
-                     axis=1)  # 將data、macd、vama合在一起
+                     axis=1)  
 
     data = data.set_index('date')
     data = data.sort_values("date")
@@ -177,13 +168,13 @@ def main(data, param_file):
 
     plot_data = test_data.reset_index()
 
-    model, rewards, shapre = test(
+    model, rewards, sharpe = test(
         env=test_env,
         model=model,
         plot_data=plot_data,
         init_money=init_money)
 
-    plot(plot_data, rewards, shapre)
+    plot(plot_data, rewards, sharpe)
     return
 
 
@@ -212,7 +203,7 @@ else:
     if st.button("Use example data"):
         st.subheader("Your Data")
         data = pd.read_csv(
-            r"E:\Jupyter\school_project\訓練中\ETF資料\完成\00646.TW.csv")
+            r"https://github.com/Alan0329/Alan0329/blob/main/Other/DQN%20Testing%20Web%20APP/00646.TW.csv")
         st.write(data)
-        param_file = r"E:\Jupyter\school_project\訓練中\訓練完成_參數\00646\200_checkpoint.pth"
+        param_file = r"https://github.com/Alan0329/Alan0329/blob/main/Other/DQN%20Testing%20Web%20APP/200_checkpoint.pth"
         main(data, param_file)
