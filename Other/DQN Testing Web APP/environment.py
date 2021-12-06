@@ -4,7 +4,7 @@ import numpy as np
 class Environment():
     def __init__(self, data, history_length=90, init_money=100000):
         self.data = data
-        self.history_length = history_length  # ?
+        self.history_length = history_length
         self.init_money = init_money  # 投入金額
         self.reset()  # reset()：讓環境在一開始,結束的時候重置環境
 
@@ -138,7 +138,7 @@ class Environment():
         self.position_value = self.position_value + \
             sum(self.hold_value) + self.account_money
         self.state = []
-        self.history.pop(0)  # 移除歷史，可能是為了減少內存
+        self.history.pop(0)  # 移除歷史
         self.state.append(self.position_value)  # 加入新的時間
         self.state.append(self.data.iloc[self.t, :]["close"])  # 加入新的時間
         self.state.append(self.data.iloc[self.t, :]["MACD"])
