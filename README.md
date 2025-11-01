@@ -3,24 +3,12 @@
 ## 🎯 Data & Marketing
 I’m passionate about using **data science and analytics to craft marketing strategies and tactical solutions that help businesses and individuals succeed**. I also love sharing knowledge through clear, approachable teaching.
 
+**Skills**: Proficient in Python, R, Excel, SQL, Power BI, and Tableau for data analysis, visualization, and reporting.
+
 ## 💼 Experience:
 - Led and contributed to projects across marketing STP strategy, AI-driven marketing analytics, and education data science.
 - Worked with top Taiwanese organizations in healthcare, tech, and higher education.
 - Delivered 100+ hours of corporate training to 400+ learners on topics like ChatGPT and marketing data science, including for TAITRA, NTUST, Chunghwa Telecom, and TMR.
-
-## Expertise
-| | |
-|--|--|
-|<img width="128" height="128" alt="ef1786b571a40892dd45c793f36dd16f" src="https://github.com/user-attachments/assets/adcdc56b-d5b6-4f27-b887-4d8b89a1a552" />
-|<img width="128" height="128" alt="df1f9b35942284d0e885c5f1127518c5" src="https://github.com/user-attachments/assets/9cbac523-1fbf-4445-ad96-b378182c04c2" />
-|<img width="128" height="128" alt="a8f0999685d9a53c03882f477656518b" src="https://github.com/user-attachments/assets/217443ad-2fcc-4213-9e53-a7b3d4d33a55" />
-|<img width="128" height="128" alt="5a4afe260d761ca25916cecfea811988" src="https://github.com/user-attachments/assets/02ce1f95-3460-4220-8860-002ae261f217" />
-|<img width="128" height="128" alt="power-bi" src="[https://github.com/user-attachments/assets/02ce1f95-3460-4220-8860-002ae261f217](https://github.com/user-attachments/assets/abe0652c-b60f-47a2-be44-434c162b990c)" />
-|<img width="128" height="128" alt="Tableau-Symbol" src="https://github.com/user-attachments/assets/15a59581-a36e-455e-9dcb-a15ef83f25e8" />|
-
-
-
-
 
 ## Selective Project Demo
 **[osu! Gameplay & Business Data Analysis](https://github.com/Alan0329/osu_analysis)**  
