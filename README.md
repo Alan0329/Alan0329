@@ -11,12 +11,12 @@ I’m passionate about using **data science and analytics to craft marketing str
 ## Expertise
 | | |
 |--|--|
-|<img width="683" height="684" alt="ef1786b571a40892dd45c793f36dd16f" src="https://github.com/user-attachments/assets/adcdc56b-d5b6-4f27-b887-4d8b89a1a552" />
-|<img width="512" height="512" alt="df1f9b35942284d0e885c5f1127518c5" src="https://github.com/user-attachments/assets/9cbac523-1fbf-4445-ad96-b378182c04c2" />
-|<img width="1024" height="1024" alt="a8f0999685d9a53c03882f477656518b" src="https://github.com/user-attachments/assets/217443ad-2fcc-4213-9e53-a7b3d4d33a55" />
-|<img width="512" height="512" alt="5a4afe260d761ca25916cecfea811988" src="https://github.com/user-attachments/assets/02ce1f95-3460-4220-8860-002ae261f217" />
-|![power-bi](https://github.com/user-attachments/assets/39ff9fd4-b084-4c73-9024-149e2840caf9)
-|<img width="3840" height="2160" alt="Tableau-Symbol" src="https://github.com/user-attachments/assets/15a59581-a36e-455e-9dcb-a15ef83f25e8" />|
+|<img width="128" height="128" alt="ef1786b571a40892dd45c793f36dd16f" src="https://github.com/user-attachments/assets/adcdc56b-d5b6-4f27-b887-4d8b89a1a552" />
+|<img width="128" height="128" alt="df1f9b35942284d0e885c5f1127518c5" src="https://github.com/user-attachments/assets/9cbac523-1fbf-4445-ad96-b378182c04c2" />
+|<img width="128" height="128" alt="a8f0999685d9a53c03882f477656518b" src="https://github.com/user-attachments/assets/217443ad-2fcc-4213-9e53-a7b3d4d33a55" />
+|<img width="128" height="128" alt="5a4afe260d761ca25916cecfea811988" src="https://github.com/user-attachments/assets/02ce1f95-3460-4220-8860-002ae261f217" />
+|<img width="128" height="128" alt="power-bi" src="[https://github.com/user-attachments/assets/02ce1f95-3460-4220-8860-002ae261f217](https://github.com/user-attachments/assets/abe0652c-b60f-47a2-be44-434c162b990c)" />
+|<img width="128" height="128" alt="Tableau-Symbol" src="https://github.com/user-attachments/assets/15a59581-a36e-455e-9dcb-a15ef83f25e8" />|
 
 
 
