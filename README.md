@@ -1,5 +1,5 @@
 ### 🎯 Data & Marketing 
-I use data science and analytics to craft marketing strategies and actionable insights for businesses and individuals. I’m also passionate about teaching—sharing complex data concepts in clear, accessible ways.
+I’m passionate about using **data science and analytics to craft marketing strategies and tactical solutions that help businesses and individuals succeed**. I also love sharing knowledge through clear, approachable teaching.
 
 ### 💼 Experience:
 - Led and contributed to projects across marketing STP strategy, AI-driven marketing analytics, and education data science.
